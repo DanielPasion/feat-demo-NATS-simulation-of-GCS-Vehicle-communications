@@ -15,8 +15,6 @@ async def main():
     sub = await nc.subscribe("foo")
 
     while True:
-        
-        
         urmom = "Command Entered: " + await aioconsole.ainput("Enter Command: ")
         
         await nc.publish("foo", bytes(urmom,encoding='utf-8'))
